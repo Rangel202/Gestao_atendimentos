@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FGTAS • Registrar Atendimento</title>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/formulario.css">
+</head>
+
+<body class="page-formulario">
+
+  <!-- Bandeira RS -->
+  <img src="assets/img/bandeira-rs.png" class="flag-rs" alt="RS" onerror="this.style.display='none'">
+
+  <!-- Topo -->
+  <header class="topbar">
+    <div class="brand">
+      📝 Registrar Atendimento
+    </div>
+
+    <nav class="nav-buttons">
+      <a href="menu.html" class="btn ghost">⬅ Voltar</a>
+      <button id="logoutBtn" class="btn ghost">Sair 🚪</button>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+
+    <h1 class="title">📋 Novo Atendimento</h1>
+    <p class="desc">Preencha as informações abaixo para registrar o atendimento.</p>
+
+    <form id="formAtendimento" class="form">
+
+      <!-- Forma de atendimento -->
+      <div class="field">
+        <label>💬 Forma de Atendimento</label>
+        <select id="forma" required>
+          <option value="">Selecione...</option>
+          <option value="presencial">Presencial</option>
+          <option value="whatsapp">WhatsApp</option>
+          <option value="telefone">Ligação Telefônica</option>
+          <option value="email">E-mail</option>
+          <option value="redes">Redes Sociais</option>
+          <option value="teams">Teams</option>
+        </select>
+      </div>
+
+      <!-- Público -->
+      <div class="field">
+        <label>👥 Público Atendido</label>
+        <select id="publico" required>
+          <option value="">Selecione...</option>
+          <option value="empregador">Empregador</option>
+          <option value="trabalhador">Trabalhador</option>
+          <option value="setor_fgtas">Setor da FGTAS</option>
+        </select>
+      </div>
+
+      <!-- Campos dinâmicos -->
+      <div id="camposDinamicos"></div>
+
+      <!-- Tipo de atendimento -->
+      <div class="field">
+        <label>📌 Tipo de Atendimento</label>
+        <select id="tipo" required>
+          <option value="">Selecione o público acima...</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn primary">Salvar Atendimento ✔</button>
+
+    </form>
+
+  </main>
+
+  <script src="assets/js/formulario.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FGTAS • Login</title>
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body class="page-login">
+  <div class="bg-flag">
+    <!-- imagem da bandeira do RS (decorativa no canto) -->
+    <img src="assets/img/bandeira-rs.png" alt="Bandeira RS" class="flag" onerror="this.style.display='none'">
+  </div>
+
+  <main class="wrap">
+    <section class="card login-card">
+      <img src="assets/img/logo.png" alt="FGTAS" class="logo" onerror="this.style.display='none'">
+      <h1>📋 Gerenciador de Atendimentos - FGTAS</h1>
+      <p class="subtitle">Acesse para registrar e gerenciar atendimentos ✅</p>
+
+      <form id="loginForm" class="form">
+        <label class="field">
+          <span>Usuário</span>
+          <input type="text" id="username" placeholder="seu.usuario" required>
+        </label>
+
+        <label class="field">
+          <span>Senha</span>
+          <input type="password" id="password" placeholder="••••••" required>
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Entrar 🔐</button>
+          <button type="button" id="demoBtn" class="btn ghost">Entrar como demo 👀</button>
+        </div>
+
+        <p class="hint">Usuário de teste: <strong>admin</strong> / senha: <strong>admin</strong></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>FGTAS • Governo do Estado RS — Projeto acadêmico 💙</p>
+    </footer>
+  </main>
+
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

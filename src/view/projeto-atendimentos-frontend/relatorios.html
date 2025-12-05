@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios • Sistema FGTAS</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/relatorios.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="assets/img/logo_fgtas.png" alt="FGTAS" class="logo-header">
+    <h2>📊 Relatórios de Atendimento</h2>
+    <a href="campos.html" class="btn-voltar">⬅ Voltar</a>
+</header>
+
+<main class="form-container">
+
+    <form id="formRelatorio">
+
+        <!-- Forma de atendimento -->
+        <div class="form-group">
+            <label>📞 Forma de Atendimento:</label>
+            <select id="filtroForma">
+                <option value="">Todas</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Whatsapp">Whatsapp</option>
+                <option value="Ligação Telefônica">Ligação Telefônica</option>
+                <option value="Email">E-mail</option>
+                <option value="Redes Sociais">Redes Sociais</option>
+                <option value="Teams">Teams</option>
+            </select>
+        </div>
+
+        <!-- Público -->
+        <div class="form-group">
+            <label>👥 Público:</label>
+            <select id="filtroPublico">
+                <option value="">Todos</option>
+                <option value="Empregador">Empregador</option>
+                <option value="Trabalhador">Trabalhador</option>
+                <option value="Setor FGTAS">Setor FGTAS</option>
+            </select>
+        </div>
+
+        <!-- Tipo de atendimento -->
+        <div class="form-group">
+            <label>📝 Tipo de Atendimento:</label>
+            <select id="filtroTipo">
+                <option value="">Todos</option>
+                <option value="Abertura de Vaga">Abertura de Vaga</option>
+                <option value="Intermediação">Intermediação</option>
+                <option value="Seguro-Desemprego">Seguro-Desemprego</option>
+                <option value="Cadastro no Sine">Cadastro no Sine</option>
+                <option value="Solicitação Interna">Solicitação Interna</option>
+                <option value="Transferência">Transferência</option>
+            </select>
+        </div>
+
+        <button type="button" class="btn" onclick="filtrar()">🔍 Buscar</button>
+        <button type="button" class="btn" onclick="exportarCSV()">📤 Exportar CSV</button>
+
+    </form>
+
+    <h3 style="margin-top: 40px;">📃 Resultados:</h3>
+
+    <table id="tabela" class="tabela-relatorio">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Forma</th>
+                <th>Público</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela">
+            <!-- Os resultados aparecem aqui -->
+        </tbody>
+    </table>
+
+</main>
+
+<script src="assets/js/relatorios.js"></script>
+<script src="assets/js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Usuários • Sistema FGTAS</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="img/logo_fgtas.png" class="logo-header">
+    <h2>👤 Gestão de Usuários</h2>
+    <a href="menu.html" class="btn-voltar">⬅ Voltar</a>
+</header>
+
+<main class="users-container">
+
+    <button class="btn" onclick="abrirModal()">➕ Adicionar Usuário</button>
+
+    <table class="tabela-relatorio" style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Usuário</th>
+                <th>Perfil</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="listaUsuarios">
+            <!-- JS irá preencher -->
+        </tbody>
+    </table>
+
+</main>
+
+<!-- Modal -->
+<div id="modalUsuario" class="modal hidden">
+    <div class="modal-content">
+        <h3 id="tituloModal">Adicionar Usuário</h3>
+
+        <form id="formUsuario">
+            <input type="hidden" id="idUsuario">
+
+            <div class="form-group">
+                <label>👤 Nome:</label>
+                <input type="text" id="nomeUsuario" placeholder="Nome completo">
+            </div>
+
+            <div class="form-group">
+                <label>🔑 Login:</label>
+                <input type="text" id="loginUsuario" placeholder="Usuário de acesso">
+            </div>
+
+            <div class="form-group">
+                <label>🛡 Perfil:</label>
+                <select id="perfilUsuario">
+                    <option value="Administrador">Administrador</option>
+                    <option value="Operador">Operador</option>
+                    <option value="Leitor">Leitor</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn" onclick="salvarUsuario()">💾 Salvar</button>
+            <button type="button" class="btn btn-danger" onclick="fecharModal()">❌ Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<script src="assets/js/usuarios.js"></script>
+<script src="assets/js/auth.js"></script>
+
+</body>
+</html>

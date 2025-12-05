@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos por Tipo de Atendimento • Sistema FGTAS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="img/logo_fgtas.png" class="logo-header">
+    <h2>🧩 Gestão de Campos por Perfil</h2>
+    <a href="dashboard.html" class="btn-voltar">⬅ Voltar</a>
+</header>
+
+<main class="users-container">
+
+    <div class="form-group">
+        <label>👥 Selecione o Perfil:</label>
+        <select id="selectPerfil" onchange="carregarCampos()">
+            <option value="">Selecione...</option>
+            <option value="Empregador">Empregador</option>
+            <option value="Trabalhador">Trabalhador</option>
+            <option value="Setor FGTAS">Setor FGTAS</option>
+        </select>
+    </div>
+
+    <!-- Área dos campos -->
+    <h3 style="margin-top: 20px;">📋 Campos configurados:</h3>
+
+    <ul id="listaCampos" class="lista-campos">
+        <!-- Js preenche -->
+    </ul>
+
+    <button class="btn" onclick="abrirModalCampo()">➕ Adicionar Campo</button>
+
+</main>
+
+<!-- Modal -->
+<div id="modalCampo" class="modal hidden">
+    <div class="modal-content">
+        <h3 id="tituloCampoModal">Adicionar Campo</h3>
+
+        <form>
+            <div class="form-group">
+                <label>📝 Nome do Campo:</label>
+                <input type="text" id="nomeCampo" placeholder="Ex: CNPJ, Telefone, CPF...">
+            </div>
+
+            <div class="form-group">
+                <label>🔠 Tipo:</label>
+                <select id="tipoCampo">
+                    <option value="texto">Texto</option>
+                    <option value="numero">Número</option>
+                    <option value="data">Data</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn" onclick="salvarCampo()">💾 Salvar</button>
+            <button type="button" class="btn btn-danger" onclick="fecharModalCampo()">❌ Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<script src="js/campos.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>

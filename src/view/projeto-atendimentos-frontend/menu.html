@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FGTAS • Menu Principal</title>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+</head>
+
+<body class="page-menu">
+
+  <!-- Bandeira RS no canto -->
+  <img src="assets/img/bandeira-rs.png" class="flag-rs" alt="RS" onerror="this.style.display='none'">
+
+  <!-- Topo -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="emoji">🏛️</span> FGTAS — Painel
+    </div>
+    <div class="user-area">
+      <span id="userName"></span>
+      <button id="logoutBtn" class="btn ghost">Sair 🚪</button>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+
+    <h1 class="title">📌 Menu Principal</h1>
+    <p class="desc">Selecione abaixo a área que deseja acessar.</p>
+
+    <section class="grid">
+      <a href="formulario.html" class="card-btn">
+        📝 Registrar Atendimento
+      </a>
+
+      <a href="relatorios.html" class="card-btn">
+        📊 Relatórios
+      </a>
+
+      <a href="usuarios.html" class="card-btn">
+        👥 Gestão de Usuários
+      </a>
+
+      <a href="campos.html" class="card-btn">
+        ⚙️ Editar Campos
+      </a>
+    </section>
+
+  </main>
+
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>
